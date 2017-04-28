@@ -1,0 +1,70 @@
+.contacts {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  background-image: url('../img/about-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__textblock {
+    width: 50%;
+    position: relative;
+    float: left;
+    display: block;
+    &-contacts {
+      text-transform: uppercase;
+      font-size: 80px;
+      color: #32ddc9;
+      font-family: $GothamMed;
+      margin-top: 25%;
+    }
+    &-text {
+      font-size: 14px;
+      font-family: $GothamMed;
+      color: #fff;
+      line-height: 30px;
+    }
+    &-button {
+      width: 195px;
+      height: 45px;
+      border: none;
+      outline: none;
+      text-align: center;
+      line-height: 44px;
+      display: inline-block;
+      background-color: #3dfbe5;
+      color: #111;
+      border-radius: 30px;
+      font-family: $gothamLight;
+      margin-top: 30px;
+      cursor: pointer;
+      &:hover {
+        transition: 300ms ease;
+        transform: scale(1.03);
+      }
+    }
+  }
+  &__mapblock {
+    width: 50%;
+    position: relative;
+    float: right;
+    display: block;
+
+  }
+  &__mapblock {
+    border-radius: 50%;
+    width: 500px;
+    margin-top: 25%;
+    height: 500px;
+    z-index: 10;
+    margin: 10% auto;
+    overflow: hidden;
+    iframe {
+      width: 500px;
+      height: 500px;
+      border: 0;
+      border-radius: 50%;
+    }
+
+  }
+}

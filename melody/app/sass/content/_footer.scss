@@ -1,0 +1,54 @@
+.footer {
+  position: fixed;
+  bottom: 20px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  display: block;
+  float: left;
+  z-index: 3;
+  .nav {
+    position: absolute;
+    top: -50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: block;
+      float: left;
+      font-size: 20px;
+      font-family: $gothamLight;
+      line-height: 30px;
+      a {
+        color: #fff;
+        &:hover {
+          color: #3dfbe5;
+          transition: 300ms ease;
+        }
+
+      }
+      &:nth-child(2) {
+        margin: 0 446px;
+      }
+      .active {
+        color: #3dfbe5;
+        box-sizing: border-box;
+        &::after{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: block;
+          background-color: #3dfbe5;
+          position: relative;
+          bottom: -13px;
+          text-align: center;
+          left: 40%;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+
