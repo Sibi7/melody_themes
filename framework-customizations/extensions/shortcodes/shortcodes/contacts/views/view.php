@@ -18,7 +18,7 @@
                 <p class="contacts__textblock-text">
                     <?= $atts['description']; ?>
                 </p>
-                <a href="#modal5" class="contacts__textblock-button open_modal">Заказать звонок</a>
+                <a href="#" id="contacts-callback" class="contacts__textblock-button open_modal">Заказать звонок</a>
 
 
             </div>

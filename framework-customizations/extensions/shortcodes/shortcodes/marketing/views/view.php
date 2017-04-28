@@ -12,48 +12,58 @@
 
 
     <div class="container">
-
+    
         <nav class="marketing__nav">
-            <ul class="tabs">
+            <ul class="marketing__tabs">
                 <?php foreach ($atts['services'] as $key => $tab) : ?>
                     <li><a href="#tab<?= $key + 1; ?>"
                            class="<?= $key == 0 ? 'active' : false; ?>"><?= $tab['title']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </nav>
+    
     </div>
 
 
     <?php foreach ($atts['services'] as $key => $tab) : ?>
-        <div id="tab<?= $key + 1; ?>" class="tab_content ">
+        
+        <div id="tab<?= $key + 1; ?>" class="marketing__tab-content tab_content">
 
             <div class="container">
+                
                 <div class="marketing__content">
 
                     <div class="marketing__content_wrap">
 
-                        <div id="tab<?= $key + 1; ?>1" class="tab_content4">
+                        <div class="marketing__content--container">
+                            
+                            <div id="tab<?= $key + 1; ?>1" class="tab_content4">
 
-                            <?php foreach ($tab['photos'] as $photo) : ?>
-                                <div class="marketing__content_wrap-item">
-                                    <a href="<?= $photo['url']; ?>" data-lightbox="image-<?= $key + 1; ?>">
-                                        <img src="<?= $photo['url']; ?>" alt="">
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php foreach ($tab['photos'] as $photo) : ?>
+                                    <div class="marketing__content_wrap-item">
+                                        <a href="<?= $photo['url']; ?>" data-lightbox="image-<?= $key + 1; ?>">
+                                            <img src="<?= $photo['url']; ?>" alt="">
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
 
-                        </div>
+                            </div>
 
-                        <div id="tab<?= $key + 1; ?>2" class="tab_content4">
-                            <?php foreach ($tab['videos'] as $video) : ?>
-                                <div class="marketing__content_wrap-item">
-                                    <iframe src="<?= $video; ?>"></iframe>
-                                </div>
-                            <?php endforeach; ?>
+                            <div id="tab<?= $key + 1; ?>2" class="tab_content4">
+                                <?php foreach ($tab['videos'] as $video) : ?>
+                                    <div class="marketing__content_wrap-item">
+                                        <a href="<?= $photo['url']; ?>" data-lightbox="image-<?= $key + 1; ?>">
+                                            <img src="<?= $photo['url']; ?>" alt="">
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
 
-                        </div>
+                            </div>
+                            
+                        </div>                       
+                        
 
-                        <ul class="tabs4">
+                        <ul class="tabs4 marketing__content--tabs">
 
                             <li>
                                 <a href="#tab<?= $key + 1; ?>1" class="button">
@@ -80,7 +90,7 @@
 
                         <p><?= $tab['description']; ?></p>
 
-                        <a href="#moda<?= $key + 1; ?>" class="open_modal">
+                        <a href="#modal<?= $key + 1; ?>" class="open_modal">
                             Смотреть пакеты
                         </a><!-- ссылкa с href="#modal1", oткрoет oкнo с  id = modal1-->
 

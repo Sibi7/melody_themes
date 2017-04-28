@@ -3,191 +3,206 @@
   position: relative;
   float: left;
   width: 100%;
-  .marketing__nav {
+  &__nav {
     position: relative;
     display: block;
     z-index: 2;
     float: left;
-    ul {
-      text-align: center;
+  }
+  &__tabs {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    z-index: 2;
+    > li {
       display: inline-block;
-      padding: 0;
-      z-index: 2;
-      li {
+      margin-top: 100px;
+      margin-right: 188px;
+      cursor: pointer;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      > a {
+        color: #fff;
+        font-family: $gothamLight;
+        font-size: 24px;
         display: inline-block;
-        margin-top: 100px;
-        margin-right: 188px;
-        cursor: pointer;
-        &:nth-child(4) {
-          margin-right: 0;
-        }
-        a {
-          color: #fff;
-          font-family: $gothamLight;
-          font-size: 24px;
-          display: inline-block;
-          margin-bottom: 20px;
-          height: 40px;
-          border-bottom: 3px solid transparent;
-          &:hover {
-            font-family: $GothamBlack;
-            transition: 300ms ease;
-            transform: scale(1.03);
-            border-bottom: 3px solid #3dfbe5;
-
-          }
-
-        }
-        .active {
+        margin-bottom: 20px;
+        height: 40px;
+        border-bottom: 3px solid transparent;
+        transition: 300ms ease;
+        &:hover {
           font-family: $GothamBlack;
+          transition: 300ms ease;
+          transform: scale(1.03);
           border-bottom: 3px solid #3dfbe5;
         }
-
+      }
+      > a.active {
+        font-family: $GothamBlack;
+        border-bottom: 3px solid #3dfbe5;
       }
     }
   }
-
-  .marketing__content {
+  &__tab-content{
     display: block;
     position: relative;
-    width: 50%;
     float: left;
-    margin-top: 0;
-    .marketing__content__text {
+    width: 100%;
+}
+
+.marketing__content {
+  display: block;
+  position: relative;
+  width: 50%;
+  float: left;
+  margin-top: 0;
+  &--container{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .marketing__content__text {
+    margin-left: 30px;
+    h1 {
       margin-left: 30px;
-      h1 {
-        margin-left: 30px;
-        color: #fff;
-        font-size: 30px;
-        font-family: $GothamReg;
-      }
-      p {
-        color: #fff;
-        font-size: 16px;
-        font-family: $GothamReg;
-        line-height: 30px;
-      }
-      a {
-        width: 200px;
-        height: 50px;
-        background-color: #3dfbe5;
-        border: none;
-        color: #111;
-        border-radius: 30px;
-        text-align: center;
-        line-height: 49px;
-        display: inline-block;
-        font-family: $gothamLight;
-        font-size: 16px;
-        margin: 20px 0;
-        &:hover {
-          border: none;
-        }
-      }
-    }
-    .tabs1, .tabs2, .tabs3, .tabs4 {
-      list-style: none;
-      border: none;
-      width: 100%;
-      float: left;
-      display: inline-flex;
-      padding-left: 0;
-    }
-    .button {
-      width: 100px;
-      height: 35px;
-      border-radius: 30px;
-      line-height: 34px;
-      text-align: center;
-      margin: 15px 85px;
-      display: inline-block;
-      outline: none;
-      background-color: transparent;
       color: #fff;
-      cursor: pointer;
-      &:hover {
-        border: 1px solid #fff;
-        transition: 300ms ease;
-        transform: scale(1.03);
-      }
-
+      font-size: 30px;
+      font-family: $GothamReg;
     }
-    .active1 {
+    p {
+      color: #fff;
+      font-size: 16px;
+      font-family: $GothamReg;
+      line-height: 30px;
+    }
+    a {
+      width: 200px;
+      height: 50px;
+      background-color: #3dfbe5;
+      border: none;
+      color: #111;
+      border-radius: 30px;
+      text-align: center;
+      line-height: 49px;
+      display: inline-block;
+      font-family: $gothamLight;
+      font-size: 16px;
+      margin: 20px 0;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+  .tabs1, .tabs2, .tabs3, .tabs4 {
+    list-style: none;
+    border: none;
+    width: 100%;
+    float: left;
+    display: inline-flex;
+    padding-left: 0;
+  }
+  .button {
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    line-height: 34px;
+    text-align: center;
+    margin: 15px 85px;
+    display: inline-block;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
       border: 1px solid #fff;
+      transition: 300ms ease;
+      transform: scale(1.03);
     }
-    .marketing__content_wrap-item {
-      width: 48%;
-      height: 120px;
-      background-color: #fff;
-      border-radius: 10px;
-      float: left;
-      margin-top: 10px;
-      box-sizing: border-box;
-      margin-right: 10px;
-      cursor: pointer;
+
+  }
+  .active1 {
+    border: 1px solid #fff;
+  }
+  .marketing__content_wrap-item {
+    width: 48%;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 10px;
+    float: left;
+    margin-top: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      transform: scale(1.03);
+      transition: 300ms ease;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       overflow: hidden;
-      position: relative;
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
-      &:hover {
-        transform: scale(1.03);
-        transition: 300ms ease;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 10px;
-      }
+      border-radius: 10px;
     }
   }
-  .tab_content {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100%;
-    margin-top: -195px;
-    padding-top: 195px;
-    @include box-sizing(border-box);
-    z-index: 1;
-  }
-  .marketing__content_wrap{
-    display: block!important;
-    float: left;
-    position: relative;
-    width: 100%;
-  }
-  #tab1 {
-    background-image: url("../img/marketing-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 0;
-  }
+}
 
-  #tab2 {
-    background-image: url("../img/events-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
+.tab_content {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin-top: -195px;
+  padding-top: 195px;
+  @include box-sizing(border-box);
+  z-index: 1;
+}
 
-  #tab3 {
-    background-image: url("../img/digital-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
-  #tab4 {
-    background-image: url("../img/media-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
+.marketing__content_wrap {
+  display: block !important;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+#tab1 {
+  background-image: url("../img/marketing-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 0;
+}
+
+#tab2 {
+  background-image: url("../img/events-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#tab3 {
+  background-image: url("../img/digital-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#tab4 {
+  background-image: url("../img/media-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
 }
 
 #modal5 {
@@ -332,7 +347,7 @@
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  /*left: 0;*/
   cursor: pointer;
   display: none;
 }

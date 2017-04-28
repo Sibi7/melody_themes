@@ -43,7 +43,7 @@
         </div>
         <span><?= fw_get_db_customizer_option('phone');?></span>
 
-        <a href="#modal5" class="head-icons__callback open_modal">Заказать звонок</a>
+        <a href="#" id="modal-header-callback" class="head-icons__callback open_modal">Заказать звонок</a>
 
     </div>
 
